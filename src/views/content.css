@@ -1,0 +1,18 @@
+.onHover-dark:hover{
+    color: white;
+    transition-duration:400ms;
+    cursor:pointer;
+}
+
+.onHover:hover{
+    color: black;
+    transition-duration:400ms;
+    cursor: pointer;
+}
+
+.onHover{
+    transition-duration:400ms;
+}
+.onHover-dark{
+    transition-duration:400ms;
+}
