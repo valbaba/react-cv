@@ -1,16 +1,18 @@
 import React from 'react';
-import './App.css';
-import ParallaxView from "./views/Parallax";
+import Router from './Router';
 
 
-function App() {
-
+const App: React.FC = () => {
+    const urlLang = window.location.href.split('/').pop(); // Get the language from the URL
+    const lang = urlLang === 'en' || urlLang === 'fr' || urlLang === 'es' ? urlLang : 'en';
     return (
-        <div className='App'>
-            <ParallaxView/>
+        <div>
+            <Router language={lang}/>
         </div>
 
-    );
+
+    )
+
 }
 
 export default App;
