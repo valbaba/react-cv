@@ -1,15 +1,17 @@
 import {projects} from "../components/project";
 import React from "react";
 import {data} from "../components/data";
+import {CodeOutlined} from '@ant-design/icons';
 
 export default function Projects(language: { language: number }) {
 
     return (
         <section id="projects"
-                 className="text-gray-400 body-font bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 transition-all">
+                 className="text-gray-400 body-font bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 transition-all h-screen">
             <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-                <div className="flex flex-col w-full mb-20">
+                <div className="text-center mb-20">
                     {/*<CodeIcon className="mx-auto inline-block w-10 mb-4" />*/}
+                    <CodeOutlined style={{ fontSize: '70px', marginBottom:'80px'}}/>
                     <h1 className="sm:text-4xl text-3xl  font-medium title-font mb-4 dark:text-white text-black">
                         {data["Apps I've Built"][language.language]}
                     </h1>

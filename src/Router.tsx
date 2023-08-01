@@ -4,10 +4,12 @@ import React, {useState} from "react";
 import {BsFillMoonStarsFill} from "react-icons/bs";
 import {AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import './views/content.css'
-import { DownloadOutlined } from '@ant-design/icons';
+import './index.css'
+import {DownloadOutlined} from '@ant-design/icons';
 import {data} from "./components/data";
 import Contact from "./views/Contact";
 import Skills from "./views/Skills";
+
 const Router: React.FC<{ language: string }> = ({language}) => {
     const final = language === "fr" ? 1 : language === "es" ? 2 : 0;
     const [darkMode, setDarkMode] = useState(false);
@@ -30,7 +32,7 @@ const Router: React.FC<{ language: string }> = ({language}) => {
             <Route path={`/${language}`} element={
                 <div className={darkMode ? "dark" : ""}>
                     <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-30 transition-all">
-                        <section>
+                        <section className="h-screen">
                             <nav className="py-10 mb-12 flex justify-between dark:text-white">
                                 <h1 className="font-burtons text-xl">developed by Valentin</h1>
                                 <ul className="flex items-center">
@@ -46,7 +48,7 @@ const Router: React.FC<{ language: string }> = ({language}) => {
                                             onClick={onButtonClick}
                                         >
                                             Curriculum Vitae <></>
-                                            <DownloadOutlined />
+                                            <DownloadOutlined/>
                                         </button>
                                     </li>
                                 </ul>

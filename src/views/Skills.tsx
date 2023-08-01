@@ -1,14 +1,16 @@
 import React from "react";
 import { skills } from "../components/skills";
 import {data} from "../components/data";
-
+import {BulbOutlined} from '@ant-design/icons';
 export default function Skills(language: { language: number }) {
     return (
-        <section id="skills" className="bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 transition-all">
+        <section id="skills" className="bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 transition-all h-screen ">
             <div className="container px-5 py-10 mx-auto">
                 <div className="text-center mb-20">
                     {/*<ChipIcon className="w-10 inline-block mb-4" />*/}
+                    <BulbOutlined style={{ fontSize: '70px'}}/>
                     <h1 className="sm:text-4xl text-3xl font-medium title-font text-black dark:text-white mb-4">
+
                         {data["Skills & Technologies"][language.language]}
                     </h1>
                     <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-900 dark:text-gray-300">
